@@ -4,6 +4,6 @@ repos:
 #    hooks:
 #    -   id: trailing-whitespace
 -   repo: https://github.com/asenindbt/pre-commit-hooks-poc
-    rev: v0.1.1
+    rev: v0.1.2
     hooks:
     -   id: print-arguments
