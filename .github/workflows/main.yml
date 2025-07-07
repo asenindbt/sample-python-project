@@ -20,6 +20,10 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+
       - name: Checkout source repo
         uses: actions/checkout@v4
         with:
@@ -27,12 +31,9 @@ jobs:
           path: 'reusable-workflow-poc'
           ref: 'main'
 
-      - name: Checkout current repo
-        uses: actions/checkout@v4
-
-      - name: Copy pre-commit file to target repo
-        run: |
-          cp reusable-workflow-poc/.github/workflows/orghooks.yaml .
+#      - name: Copy pre-commit file to target repo
+#        run: |
+#          cp reusable-workflow-poc/.github/workflows/orghooks.yaml .
 
       - name: Check file directory
         run: |
