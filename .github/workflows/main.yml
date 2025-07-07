@@ -31,10 +31,11 @@ jobs:
           path: 'reusable-workflow-poc'
           ref: 'main'
 
-#      - name: Copy pre-commit file to target repo
-#        run: |
-#          cp reusable-workflow-poc/.github/workflows/orghooks.yaml .
-
       - name: Check file directory
         run: |
-          ls -la
+          ls -la reusable-workflow-poc
+
+      - name: Copy pre-commit file to target repo
+        run: |
+          cp reusable-workflow-poc/orghooks.yaml .
+
