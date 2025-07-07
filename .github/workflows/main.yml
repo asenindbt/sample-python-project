@@ -39,3 +39,6 @@ jobs:
         run: |
           cp reusable-workflow-poc/orghooks.yaml .
 
+      - name: Check root directory
+        run: |
+          ls -la
