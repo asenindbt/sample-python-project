@@ -53,3 +53,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pre-commit
 
+      - name: Run org-wide pre-commit hook
+        run: |
+          pre-commit run --config "./orghooks.yaml" --files
