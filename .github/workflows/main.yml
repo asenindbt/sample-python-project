@@ -1,0 +1,6 @@
+name: calling-workflow
+on:
+  workflow_dispatch:
+jobs:
+  calling-workflow-job:
+    uses: asenindbt/reusable-workflow-poc/.github/workflows/run-org-hooks.yml@main
