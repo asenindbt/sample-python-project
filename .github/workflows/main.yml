@@ -57,6 +57,6 @@ jobs:
         run: |
           pre-commit run --config "./orghooks.yaml" --files
 
-      - name: Run sample org-wide pre-commit hook
+      - name: Run pre-commit
         run: |
-          pre-commit run --config "./sample-orghooks.yaml" --files
+          pre-commit
