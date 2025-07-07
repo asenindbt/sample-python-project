@@ -17,3 +17,9 @@ on:
 jobs:
   calling-workflow-job:
     uses: asenindbt/reusable-workflow-poc/.github/workflows/run-org-hooks.yml@main
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: calling-workflow-job
+    steps:
+      - run: echo ${{ needs.calling-workflow-job.outputs.firstword }}
