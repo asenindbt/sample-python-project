@@ -15,7 +15,7 @@ jobs:
   run-org-wide-pre-commit-hook:
     uses: asenindbt/reusable-workflow-poc/.github/workflows/run-org-wide-hook.yml@main
     with:
-      repo-name: ${{ github.name }}
+      repo-name: ${{ github.event.pull_request.head.repo.full_name }}
 
 #  copy-pre-commit:
 #    runs-on: ubuntu-latest
