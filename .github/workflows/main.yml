@@ -12,8 +12,6 @@ jobs:
 
   run-org-wide-pre-commit-hook:
     uses: asenindbt/reusable-workflow-poc/.github/workflows/run-org-wide-hook.yml@main
-    with:
-      repo-name: ${{ github.repository }}
 
   repo-specific-tasks:
     runs-on: ubuntu-latest
