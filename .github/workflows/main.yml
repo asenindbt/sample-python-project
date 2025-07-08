@@ -18,12 +18,12 @@ jobs:
     steps:
       - name: Print repo name
         run: |
-          echo ${{ github.event.pull_request.head.repo.full_name }}
+          echo ${{ github.repository }}
 
   run-org-wide-pre-commit-hook:
     uses: asenindbt/reusable-workflow-poc/.github/workflows/run-org-wide-hook.yml@main
     with:
-      repo-name: ${{ github.event.pull_request.head.repo.full_name }}
+      repo-name: ${{ github.repository }}
 
 #  copy-pre-commit:
 #    runs-on: ubuntu-latest
